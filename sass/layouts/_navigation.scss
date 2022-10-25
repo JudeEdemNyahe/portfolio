@@ -1,0 +1,19 @@
+.header-nav {
+    font-size: 2rem;
+    background-color: transparent;
+    &__list {
+        list-style: none;
+        display: flex;
+        text-decoration: none;
+        &>* {
+            margin-left: 0rem;
+        }
+    }
+    .nav__link {
+        color: var(--color-light);
+        text-decoration: none;
+        text-transform: capitalize;
+        padding: 0.5rem 1.5rem;
+        font-weight: 300;
+    }
+}

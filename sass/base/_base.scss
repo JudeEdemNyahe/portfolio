@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "GT Walsheim Pro";
+    src: url(../fonts/GTWalsheimPro-Medium.ttf);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    //Defines what 1rem is
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "lato", sans-serif;
+    background-color: var(--color-primary-2);
+}

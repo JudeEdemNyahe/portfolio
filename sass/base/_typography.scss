@@ -1,0 +1,25 @@
+.paragraph-primary--sub {
+    color: var(--color-light);
+    font-size: 1.6rem;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.4rem;
+    /* or 133% */
+    text-align: justify;
+}
+
+.intro {
+    &__name {
+        font-family: "GT Walsheim Pro";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18rem;
+        line-height: 25.1rem;
+        background: linear-gradient( 89.81deg, #9845e8 -1.72%, #33d2ff 54.05%, #dd5789 99.78%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
