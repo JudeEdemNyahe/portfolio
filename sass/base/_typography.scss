@@ -6,20 +6,63 @@
     font-weight: 300;
     line-height: 2.4rem;
     /* or 133% */
+    line-height: 2;
     text-align: justify;
 }
 
+.header-secondary-sub {
+    @include Gridframe;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    /* identical to box height */
+    color: var(--color-light);
+}
+
+.paragraph-secondary--sub {
+    @include Gridframe;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--color-primary-3);
+}
+
+.header-primary-sub {
+    @include Gridframe;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    color: var(--color-light);
+}
+
+.paragraph-secondary--sub-1 {
+    @include Gridframe;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--color-primary-4);
+}
+
 .intro {
+    margin-bottom: 16rem;
     &__name {
         font-family: "GT Walsheim Pro";
         font-style: normal;
         font-weight: 500;
         font-size: 18rem;
         line-height: 25.1rem;
-        background: linear-gradient( 89.81deg, #9845e8 -1.72%, #33d2ff 54.05%, #dd5789 99.78%);
+        background: linear-gradient( 89.81deg, var(--color-secondary-1) -1.72%, var(--color-secondary-2) 54.05%, var(--color-secondary-3) 99.78%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+}
+
+.header-sub {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: $margin-bottom-small;
 }

@@ -2,7 +2,18 @@
 :root {
   --color-primary: #000000;
   --color-primary-2: #111111;
-  --color-light: #fefcfb; }
+  --color-primary-3: #c4c4c4;
+  --color-primary-4: #6cace4;
+  --color-light: #fefcfb;
+  --color-secondary-1: #9845e8;
+  --color-secondary-2: #33d2ff;
+  --color-secondary-3: #dd5789;
+  --color-tertiary: #6964de;
+  --color-tertiary-2: #fca6e9;
+  --color-tertiary-3: #f4426c;
+  --color-tertiary-4: #fbf2b1;
+  --color-tertiary-5: #d24074;
+  --color-tertiary-6: #6518b4; }
 
 @font-face {
   font-family: "GT Walsheim Pro";
@@ -35,29 +46,185 @@ body {
   font-weight: 300;
   line-height: 2.4rem;
   /* or 133% */
+  line-height: 2;
   text-align: justify; }
 
 /* line 13, sass/base/_typography.scss */
-.intro__name {
-  font-family: "GT Walsheim Pro";
+.header-secondary-sub {
+  font-family: "Inter";
   font-style: normal;
-  font-weight: 500;
-  font-size: 18rem;
-  line-height: 25.1rem;
-  background: linear-gradient(89.81deg, #9845e8 -1.72%, #33d2ff 54.05%, #dd5789 99.78%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  /* identical to box height */
+  color: var(--color-light); }
+
+/* line 21, sass/base/_typography.scss */
+.paragraph-secondary--sub {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: var(--color-primary-3); }
+
+/* line 28, sass/base/_typography.scss */
+.header-primary-sub {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  color: var(--color-light); }
+
+/* line 36, sass/base/_typography.scss */
+.paragraph-secondary--sub-1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: var(--color-primary-4); }
+
+/* line 43, sass/base/_typography.scss */
+.intro {
+  margin-bottom: 16rem; }
+  /* line 45, sass/base/_typography.scss */
+  .intro__name {
+    font-family: "GT Walsheim Pro";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18rem;
+    line-height: 25.1rem;
+    background: linear-gradient(89.81deg, var(--color-secondary-1) -1.72%, var(--color-secondary-2) 54.05%, var(--color-secondary-3) 99.78%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; }
+
+/* line 59, sass/base/_typography.scss */
+.header-sub {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 5rem; }
+
+/* line 1, sass/components/_button.scss */
+.btn-gradient {
+  padding: 20px 60px;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--color-light); }
+
+/* line 13, sass/components/_button.scss */
+.btn-gradient::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  border-radius: 4px;
+  background-color: var(--color-primary-2);
+  z-index: -1;
+  transition: 200ms; }
+
+/* line 34, sass/components/_button.scss */
+.btn-row__email {
+  background: linear-gradient(to right, var(--color-secondary-1), var(--color-secondary-2)); }
+
+/* line 38, sass/components/_button.scss */
+.btn-row__linkedin {
+  background: linear-gradient(to right, var(--color-tertiary), var(--color-tertiary-2)); }
+
+/* line 42, sass/components/_button.scss */
+.btn-row__slack {
+  background: linear-gradient(to right, var(--color-tertiary-3), var(--color-tertiary-4)); }
+
+/* line 46, sass/components/_button.scss */
+.btn-row__github {
+  background: linear-gradient(to right, var(--color-tertiary-5), var(--color-tertiary-6)); }
+
+/* line 50, sass/components/_button.scss */
+.btn-row__link {
+  background: linear-gradient(to right, var(--color-secondary-1), var(--color-secondary-2)); }
+
+/* line 1, sass/components/gridCard.scss */
+.projects__list {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 80px;
+  grid-row-gap: 80px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  color: var(--color-light); }
+  /* line 12, sass/components/gridCard.scss */
+  .projects__list-link, .projects__list-link:visited, .projects__list:link {
+    text-decoration: none;
+    color: inherit; }
+  /* line 19, sass/components/gridCard.scss */
+  .projects__list-shape img {
+    width: 100%; }
+  /* line 23, sass/components/gridCard.scss */
+  .projects__list-caption {
+    display: flex;
+    height: 16rem;
+    padding-right: 30rem;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 5rem; }
+  /* line 31, sass/components/gridCard.scss */
+  .projects__list-github {
+    display: flex;
+    align-items: center; }
+    /* line 34, sass/components/gridCard.scss */
+    .projects__list-github object {
+      flex: 0 0 20%; }
 
 /* line 1, sass/pages/_home.scss */
+section {
+  padding: 0rem 20rem;
+  margin-top: 17vh; }
+
+/* line 6, sass/pages/_home.scss */
 main {
   background-color: var(--color-primary-2);
   margin-top: 17vh; }
 
-/* line 7, sass/pages/_home.scss */
+/* line 12, sass/pages/_home.scss */
 .hero {
-  padding: 0rem 17rem;
+  background-color: transparent;
+  width: 100%; }
+
+/* line 17, sass/pages/_home.scss */
+.btn-row {
+  display: flex; }
+  /* line 19, sass/pages/_home.scss */
+  .btn-row > *:not(:last-child) {
+    margin-right: 2rem; }
+
+/* line 24, sass/pages/_home.scss */
+.btn-row__icon {
+  display: flex;
+  align-items: center; }
+  /* line 27, sass/pages/_home.scss */
+  .btn-row__icon object {
+    margin-right: 1rem; }
+
+/* line 32, sass/pages/_home.scss */
+.featured-projects {
   background-color: transparent; }
 
 /* line 1, sass/layouts/_header.scss */
@@ -75,15 +242,13 @@ main {
   .header__container {
     width: 100%;
     margin-right: auto;
-    margin-left: auto; }
-  /* line 16, sass/layouts/_header.scss */
+    margin-left: auto;
+    padding: 0rem 20rem; }
+  /* line 17, sass/layouts/_header.scss */
   .header__inner {
     display: flex;
     align-items: center;
-    justify-content: center; }
-  /* line 21, sass/layouts/_header.scss */
-  .header__logo {
-    flex: 0 0 50%; }
+    justify-content: space-between; }
 
 /* line 1, sass/layouts/_navigation.scss */
 .header-nav {
@@ -104,3 +269,81 @@ main {
     text-transform: capitalize;
     padding: 0.5rem 1.5rem;
     font-weight: 300; }
+
+/* line 1, sass/layouts/_workExperience.scss */
+.content {
+  display: flex;
+  color: var(--color-light); }
+
+/* line 6, sass/layouts/_workExperience.scss */
+.sidebar {
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 2px solid #1f1e1e; }
+
+/* line 15, sass/layouts/_workExperience.scss */
+.experience__description {
+  flex: 1; }
+
+/* line 18, sass/layouts/_workExperience.scss */
+.experience__type {
+  display: flex;
+  justify-content: space-between; }
+
+/* line 22, sass/layouts/_workExperience.scss */
+.experience__skills {
+  display: flex;
+  flex-direction: column;
+  height: 13.2rem;
+  justify-content: space-evenly; }
+
+/* line 30, sass/layouts/_workExperience.scss */
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: -1.8rem; }
+  /* line 34, sass/layouts/_workExperience.scss */
+  .side-nav__item {
+    position: relative; }
+    /* line 36, sass/layouts/_workExperience.scss */
+    .side-nav__item:not(:last-child) {
+      margin-bottom: 0.5rem; }
+  /* line 40, sass/layouts/_workExperience.scss */
+  .side-nav__item:hover::before, .side-nav__item--active::before {
+    transform: scaleY(1);
+    width: 50%; }
+  /* line 45, sass/layouts/_workExperience.scss */
+  .side-nav__item:active::before {
+    background-color: var(--color-light); }
+  /* line 48, sass/layouts/_workExperience.scss */
+  .side-nav__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary-3);
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  /* line 59, sass/layouts/_workExperience.scss */
+  .side-nav__link,
+  .side-nav__link :link,
+  .side-nav__link :visited {
+    color: var(--color-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    display: flex;
+    position: relative;
+    z-index: 100;
+    align-items: center; }
+  /* line 72, sass/layouts/_workExperience.scss */
+  .side-nav__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor; }
