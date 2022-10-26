@@ -46,13 +46,14 @@
         font-family: "GT Walsheim Pro";
         font-style: normal;
         font-weight: 500;
-        font-size: 18rem;
-        line-height: 25.1rem;
+        font-size: 9.6rem;
+        line-height: 11rem;
+        /* identical to box height */
         background: linear-gradient( 89.81deg, var(--color-secondary-1) -1.72%, var(--color-secondary-2) 54.05%, var(--color-secondary-3) 99.78%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
     }
 }
 

@@ -1,7 +1,7 @@
 /* line 1, sass/abstracts/_variables.scss */
 :root {
   --color-primary: #000000;
-  --color-primary-2: #111111;
+  --color-primary-2: #0d1117;
   --color-primary-3: #c4c4c4;
   --color-primary-4: #6cace4;
   --color-light: #fefcfb;
@@ -95,15 +95,16 @@ body {
     font-family: "GT Walsheim Pro";
     font-style: normal;
     font-weight: 500;
-    font-size: 18rem;
-    line-height: 25.1rem;
+    font-size: 9.6rem;
+    line-height: 11rem;
+    /* identical to box height */
     background: linear-gradient(89.81deg, var(--color-secondary-1) -1.72%, var(--color-secondary-2) 54.05%, var(--color-secondary-3) 99.78%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    text-fill-color: transparent; }
 
-/* line 59, sass/base/_typography.scss */
+/* line 60, sass/base/_typography.scss */
 .header-sub {
   font-family: "Inter";
   font-style: normal;
@@ -195,7 +196,7 @@ body {
 
 /* line 1, sass/pages/_home.scss */
 section {
-  padding: 0rem 20rem;
+  padding: 0rem 26rem;
   margin-top: 17vh; }
 
 /* line 6, sass/pages/_home.scss */
@@ -243,7 +244,7 @@ main {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding: 0rem 20rem; }
+    padding: 0rem 26rem; }
   /* line 17, sass/layouts/_header.scss */
   .header__inner {
     display: flex;
