@@ -1,6 +1,7 @@
 /* line 1, sass/abstracts/_variables.scss */
 :root {
   --color-primary: #000000;
+  --color-primary-light: #1a283b;
   --color-primary-2: #0d1117;
   --color-primary-3: #c4c4c4;
   --color-primary-4: #6cace4;
@@ -39,19 +40,18 @@ body {
 
 /* line 1, sass/base/_typography.scss */
 .paragraph-primary--sub {
-  color: var(--color-light);
-  font-size: 1.6rem;
-  font-family: "Inter";
+  color: #a3b3bc;
+  font-size: 2rem;
+  font-family: "poppins";
   font-style: normal;
   font-weight: 300;
   line-height: 2.4rem;
-  /* or 133% */
   line-height: 2;
   text-align: justify; }
 
-/* line 13, sass/base/_typography.scss */
+/* line 12, sass/base/_typography.scss */
 .header-secondary-sub {
-  font-family: "Inter";
+  font-family: "poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 2.4rem;
@@ -59,18 +59,18 @@ body {
   /* identical to box height */
   color: var(--color-light); }
 
-/* line 21, sass/base/_typography.scss */
+/* line 20, sass/base/_typography.scss */
 .paragraph-secondary--sub {
-  font-family: "Inter";
+  font-family: "poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 1.4rem;
   line-height: 2.4rem;
   color: var(--color-primary-3); }
 
-/* line 28, sass/base/_typography.scss */
+/* line 27, sass/base/_typography.scss */
 .header-primary-sub {
-  font-family: "Inter";
+  font-family: "poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
@@ -78,19 +78,19 @@ body {
   /* identical to box height */
   color: var(--color-light); }
 
-/* line 36, sass/base/_typography.scss */
+/* line 35, sass/base/_typography.scss */
 .paragraph-secondary--sub-1 {
-  font-family: "Inter";
+  font-family: "poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 1.4rem;
   line-height: 2.4rem;
   color: var(--color-primary-4); }
 
-/* line 43, sass/base/_typography.scss */
+/* line 42, sass/base/_typography.scss */
 .intro {
   margin-bottom: 16rem; }
-  /* line 45, sass/base/_typography.scss */
+  /* line 44, sass/base/_typography.scss */
   .intro__name {
     font-family: "GT Walsheim Pro";
     font-style: normal;
@@ -102,11 +102,11 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent; }
+    -webkit-text-fill-color: transparent; }
 
-/* line 60, sass/base/_typography.scss */
+/* line 59, sass/base/_typography.scss */
 .header-sub {
-  font-family: "Inter";
+  font-family: "poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 1.8rem;
@@ -123,7 +123,7 @@ body {
   position: relative;
   z-index: 1;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: po;
   color: var(--color-light); }
 
 /* line 13, sass/components/_button.scss */
@@ -160,6 +160,10 @@ body {
   background: linear-gradient(to right, var(--color-secondary-1), var(--color-secondary-2)); }
 
 /* line 1, sass/components/gridCard.scss */
+.projects {
+  margin-bottom: 15rem; }
+
+/* line 5, sass/components/gridCard.scss */
 .projects__list {
   display: -ms-grid;
   display: grid;
@@ -171,14 +175,14 @@ body {
   -ms-grid-rows: auto;
   grid-template-rows: auto;
   color: var(--color-light); }
-  /* line 12, sass/components/gridCard.scss */
+  /* line 16, sass/components/gridCard.scss */
   .projects__list-link, .projects__list-link:visited, .projects__list:link {
     text-decoration: none;
     color: inherit; }
-  /* line 19, sass/components/gridCard.scss */
+  /* line 23, sass/components/gridCard.scss */
   .projects__list-shape img {
     width: 100%; }
-  /* line 23, sass/components/gridCard.scss */
+  /* line 27, sass/components/gridCard.scss */
   .projects__list-caption {
     display: flex;
     height: 16rem;
@@ -186,45 +190,51 @@ body {
     flex-direction: column;
     justify-content: space-around;
     margin-bottom: 5rem; }
-  /* line 31, sass/components/gridCard.scss */
+  /* line 35, sass/components/gridCard.scss */
   .projects__list-github {
     display: flex;
     align-items: center; }
-    /* line 34, sass/components/gridCard.scss */
+    /* line 38, sass/components/gridCard.scss */
     .projects__list-github object {
       flex: 0 0 20%; }
 
+/* line 1, sass/components/_line.scss */
+.line {
+  border: 0.5px solid var(--color-primary-light);
+  margin-bottom: 5rem; }
+
 /* line 1, sass/pages/_home.scss */
-section {
+section,
+footer {
   padding: 0rem 26rem;
   margin-top: 17vh; }
 
-/* line 6, sass/pages/_home.scss */
+/* line 7, sass/pages/_home.scss */
 main {
   background-color: var(--color-primary-2);
   margin-top: 17vh; }
 
-/* line 12, sass/pages/_home.scss */
+/* line 13, sass/pages/_home.scss */
 .hero {
   background-color: transparent;
   width: 100%; }
 
-/* line 17, sass/pages/_home.scss */
+/* line 18, sass/pages/_home.scss */
 .btn-row {
   display: flex; }
-  /* line 19, sass/pages/_home.scss */
+  /* line 20, sass/pages/_home.scss */
   .btn-row > *:not(:last-child) {
     margin-right: 2rem; }
 
-/* line 24, sass/pages/_home.scss */
+/* line 25, sass/pages/_home.scss */
 .btn-row__icon {
   display: flex;
   align-items: center; }
-  /* line 27, sass/pages/_home.scss */
+  /* line 28, sass/pages/_home.scss */
   .btn-row__icon object {
     margin-right: 1rem; }
 
-/* line 32, sass/pages/_home.scss */
+/* line 33, sass/pages/_home.scss */
 .featured-projects {
   background-color: transparent; }
 
@@ -348,3 +358,18 @@ main {
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+
+/* line 2, sass/layouts/_footer.scss */
+.other-projects__collection {
+  display: flex;
+  margin-bottom: 15rem; }
+
+/* line 6, sass/layouts/_footer.scss */
+.other-projects__main {
+  display: flex;
+  flex-direction: column;
+  height: 27rem;
+  justify-content: space-between; }
+  /* line 11, sass/layouts/_footer.scss */
+  .other-projects__main p {
+    width: 50%; }

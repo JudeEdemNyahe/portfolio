@@ -1,11 +1,10 @@
 .paragraph-primary--sub {
-    color: var(--color-light);
-    font-size: 1.6rem;
-    font-family: "Inter";
+    color: #a3b3bc;
+    font-size: 2rem;
+    font-family: "poppins";
     font-style: normal;
     font-weight: 300;
     line-height: 2.4rem;
-    /* or 133% */
     line-height: 2;
     text-align: justify;
 }
@@ -53,12 +52,12 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
     }
 }
 
 .header-sub {
-    font-family: "Inter";
+    font-family: "poppins";
     font-style: normal;
     font-weight: 300;
     font-size: 1.8rem;

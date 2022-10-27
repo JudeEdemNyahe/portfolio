@@ -1,0 +1,15 @@
+.other-projects {
+    &__collection {
+        display: flex;
+        margin-bottom: $margin-bottom-huge;
+    }
+    &__main {
+        display: flex;
+        flex-direction: column;
+        height: 27rem;
+        justify-content: space-between;
+        p {
+            width: 50%;
+        }
+    }
+}
