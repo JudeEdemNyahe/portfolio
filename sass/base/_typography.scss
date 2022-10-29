@@ -1,5 +1,5 @@
 .paragraph-primary--sub {
-    color: #a3b3bc;
+    color: var(--color-dark);
     font-size: 2rem;
     font-family: "poppins";
     font-style: normal;
@@ -40,7 +40,11 @@
 }
 
 .intro {
-    margin-bottom: 16rem;
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 18rem;
     &__name {
         font-family: "GT Walsheim Pro";
         font-style: normal;

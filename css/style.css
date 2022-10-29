@@ -5,7 +5,9 @@
   --color-primary-2: #0d1117;
   --color-primary-3: #c4c4c4;
   --color-primary-4: #6cace4;
+  --color-primary-5: #2c2b2b;
   --color-light: #fefcfb;
+  --color-dark: #a3b3bc;
   --color-secondary-1: #9845e8;
   --color-secondary-2: #33d2ff;
   --color-secondary-3: #dd5789;
@@ -14,7 +16,8 @@
   --color-tertiary-3: #f4426c;
   --color-tertiary-4: #fbf2b1;
   --color-tertiary-5: #d24074;
-  --color-tertiary-6: #6518b4; }
+  --color-tertiary-6: #6518b4;
+  --color-white: #fff; }
 
 @font-face {
   font-family: "GT Walsheim Pro";
@@ -40,7 +43,7 @@ body {
 
 /* line 1, sass/base/_typography.scss */
 .paragraph-primary--sub {
-  color: #a3b3bc;
+  color: var(--color-dark);
   font-size: 2rem;
   font-family: "poppins";
   font-style: normal;
@@ -89,8 +92,12 @@ body {
 
 /* line 42, sass/base/_typography.scss */
 .intro {
-  margin-bottom: 16rem; }
-  /* line 44, sass/base/_typography.scss */
+  height: 38rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 18rem; }
+  /* line 48, sass/base/_typography.scss */
   .intro__name {
     font-family: "GT Walsheim Pro";
     font-style: normal;
@@ -104,7 +111,7 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent; }
 
-/* line 59, sass/base/_typography.scss */
+/* line 63, sass/base/_typography.scss */
 .header-sub {
   font-family: "poppins";
   font-style: normal;
@@ -263,23 +270,27 @@ main {
 
 /* line 1, sass/layouts/_navigation.scss */
 .header-nav {
+  font-family: "poppins";
   font-size: 2rem;
   background-color: transparent; }
-  /* line 4, sass/layouts/_navigation.scss */
+  /* line 5, sass/layouts/_navigation.scss */
   .header-nav__list {
     list-style: none;
     display: flex;
     text-decoration: none; }
-    /* line 8, sass/layouts/_navigation.scss */
+    /* line 9, sass/layouts/_navigation.scss */
     .header-nav__list > * {
       margin-left: 0rem; }
-  /* line 12, sass/layouts/_navigation.scss */
+  /* line 13, sass/layouts/_navigation.scss */
   .header-nav .nav__link {
-    color: var(--color-light);
+    color: var(--color-dark);
     text-decoration: none;
     text-transform: capitalize;
     padding: 0.5rem 1.5rem;
     font-weight: 300; }
+    /* line 19, sass/layouts/_navigation.scss */
+    .header-nav .nav__link:hover {
+      color: var(--color-white); }
 
 /* line 1, sass/layouts/_workExperience.scss */
 .content {
@@ -297,38 +308,41 @@ main {
 /* line 15, sass/layouts/_workExperience.scss */
 .experience__description {
   flex: 1; }
+  /* line 17, sass/layouts/_workExperience.scss */
+  .experience__description--content {
+    display: none; }
 
-/* line 18, sass/layouts/_workExperience.scss */
+/* line 21, sass/layouts/_workExperience.scss */
 .experience__type {
   display: flex;
   justify-content: space-between; }
 
-/* line 22, sass/layouts/_workExperience.scss */
+/* line 25, sass/layouts/_workExperience.scss */
 .experience__skills {
   display: flex;
   flex-direction: column;
-  height: 13.2rem;
+  height: 18.2rem;
   justify-content: space-evenly; }
 
-/* line 30, sass/layouts/_workExperience.scss */
+/* line 33, sass/layouts/_workExperience.scss */
 .side-nav {
   font-size: 1.4rem;
   list-style: none;
-  margin-top: -1.8rem; }
-  /* line 34, sass/layouts/_workExperience.scss */
+  margin-top: 0rem; }
+  /* line 37, sass/layouts/_workExperience.scss */
   .side-nav__item {
     position: relative; }
-    /* line 36, sass/layouts/_workExperience.scss */
+    /* line 39, sass/layouts/_workExperience.scss */
     .side-nav__item:not(:last-child) {
       margin-bottom: 0.5rem; }
-  /* line 40, sass/layouts/_workExperience.scss */
+  /* line 43, sass/layouts/_workExperience.scss */
   .side-nav__item:hover::before, .side-nav__item--active::before {
     transform: scaleY(1);
     width: 50%; }
-  /* line 45, sass/layouts/_workExperience.scss */
+  /* line 48, sass/layouts/_workExperience.scss */
   .side-nav__item:active::before {
     background-color: var(--color-light); }
-  /* line 48, sass/layouts/_workExperience.scss */
+  /* line 51, sass/layouts/_workExperience.scss */
   .side-nav__item::before {
     content: "";
     position: absolute;
@@ -336,10 +350,10 @@ main {
     left: 0;
     height: 100%;
     width: 3px;
-    background-color: var(--color-primary-3);
+    background-color: var(--color-primary-5);
     transform: scaleY(0);
     transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
-  /* line 59, sass/layouts/_workExperience.scss */
+  /* line 62, sass/layouts/_workExperience.scss */
   .side-nav__link,
   .side-nav__link :link,
   .side-nav__link :visited {
@@ -350,14 +364,18 @@ main {
     padding: 1.5rem 3rem;
     display: flex;
     position: relative;
-    z-index: 100;
+    z-index: 1;
     align-items: center; }
-  /* line 72, sass/layouts/_workExperience.scss */
+  /* line 75, sass/layouts/_workExperience.scss */
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+
+/* line 83, sass/layouts/_workExperience.scss */
+.tabs__content-active {
+  display: block; }
 
 /* line 2, sass/layouts/_footer.scss */
 .other-projects__collection {

@@ -14,6 +14,9 @@
 .experience {
     &__description {
         flex: 1;
+        &--content {
+            display: none;
+        }
     }
     &__type {
         display: flex;
@@ -22,7 +25,7 @@
     &__skills {
         display: flex;
         flex-direction: column;
-        height: 13.2rem;
+        height: 18.2rem;
         justify-content: space-evenly;
     }
 }
@@ -30,7 +33,7 @@
 .side-nav {
     font-size: 1.4rem;
     list-style: none;
-    margin-top: -1.8rem;
+    margin-top: 0rem;
     &__item {
         position: relative;
         &:not(:last-child) {
@@ -52,7 +55,7 @@
         left: 0;
         height: 100%;
         width: 3px;
-        background-color: var(--color-primary-3);
+        background-color: var(--color-primary-5);
         transform: scaleY(0);
         transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
     }
@@ -66,7 +69,7 @@
         padding: 1.5rem 3rem;
         display: flex;
         position: relative;
-        z-index: 100;
+        z-index: 1;
         align-items: center;
     }
     &__icon {
@@ -75,4 +78,8 @@
         margin-right: 2rem;
         fill: currentColor;
     }
+}
+
+.tabs__content-active {
+    display: block;
 }
