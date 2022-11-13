@@ -13,11 +13,16 @@
         margin-right: auto;
         margin-left: auto;
         padding: 0rem 26rem;
+        padding-right: 8em;
+        padding-left: 8rem;
+        max-width: 1170px;
+        @include respond(big-desktop) {
+            max-width: 1549px;
+        }
     }
     &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    &__logo {}
 }

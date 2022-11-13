@@ -1,18 +1,32 @@
-section,
 footer {
-    padding: 0rem 26rem;
+    // padding: 0rem 26rem;
     margin-top: 17vh;
+}
+
+section {
+    margin-top: 17vh;
+    overflow: hidden;
 }
 
 main {
     background-color: var(--color-primary-2);
-    // padding: 25rem 0;
-    margin-top: 17vh;
+}
+
+.hero__container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1170px;
+    padding-right: 8em;
+    padding-left: 8em;
+    @include respond(big-desktop) {
+        max-width: 1549px;
+    }
 }
 
 .hero {
-    background-color: transparent;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18rem;
 }
 
 .btn-row {

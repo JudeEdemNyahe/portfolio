@@ -40,11 +40,12 @@
 }
 
 .intro {
-    height: 38rem;
+    // height: 38rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 18rem;
+    gap: 2rem;
+    margin-bottom: 16.1rem;
     &__name {
         font-family: "GT Walsheim Pro";
         font-style: normal;
@@ -52,7 +53,7 @@
         font-size: 9.6rem;
         line-height: 11rem;
         /* identical to box height */
-        background: linear-gradient( 89.81deg, var(--color-secondary-1) -1.72%, var(--color-secondary-2) 54.05%, var(--color-secondary-3) 99.78%);
+        background: linear-gradient( 89.81deg, var(--color-secondary-1) -1.72%, var(--color-secondary-2) 54.05%, var(--color-secondary-2) 99.78%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;

@@ -1,3 +1,19 @@
+/*
+0-600px   phone
+600-900px Tablet portrait
+900-100px Tablet landscape
+1200-1900] is where our normal styles apply
+1800 +: Big desktop
+
+
+$breakpoint argument choices:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+
+*/
 /* line 1, sass/abstracts/_variables.scss */
 :root {
   --color-primary: #000000;
@@ -34,8 +50,20 @@
 /* line 14, sass/base/_base.scss */
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 81em) {
+    /* line 14, sass/base/_base.scss */
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 61.9375em) {
+    /* line 14, sass/base/_base.scss */
+    html {
+      font-size: 44%; } }
+  @media only screen and (min-width: 90em) {
+    /* line 14, sass/base/_base.scss */
+    html {
+      font-size: 62.5%; } }
 
-/* line 19, sass/base/_base.scss */
+/* line 28, sass/base/_base.scss */
 body {
   box-sizing: border-box;
   font-family: "lato", sans-serif;
@@ -92,12 +120,12 @@ body {
 
 /* line 42, sass/base/_typography.scss */
 .intro {
-  height: 38rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 18rem; }
-  /* line 48, sass/base/_typography.scss */
+  gap: 2rem;
+  margin-bottom: 16.1rem; }
+  /* line 49, sass/base/_typography.scss */
   .intro__name {
     font-family: "GT Walsheim Pro";
     font-style: normal;
@@ -105,13 +133,13 @@ body {
     font-size: 9.6rem;
     line-height: 11rem;
     /* identical to box height */
-    background: linear-gradient(89.81deg, var(--color-secondary-1) -1.72%, var(--color-secondary-2) 54.05%, var(--color-secondary-3) 99.78%);
+    background: linear-gradient(89.81deg, var(--color-secondary-1) -1.72%, var(--color-secondary-2) 54.05%, var(--color-secondary-2) 99.78%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-text-fill-color: transparent; }
 
-/* line 63, sass/base/_typography.scss */
+/* line 64, sass/base/_typography.scss */
 .header-sub {
   font-family: "poppins";
   font-style: normal;
@@ -124,47 +152,35 @@ body {
 
 /* line 1, sass/components/_button.scss */
 .btn-gradient {
-  padding: 20px 60px;
-  border: none;
-  outline: none;
   position: relative;
-  z-index: 1;
-  border-radius: 5px;
-  cursor: po;
-  color: var(--color-light); }
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light);
+  padding: 2rem 6rem;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid transparent; }
 
 /* line 13, sass/components/_button.scss */
-.btn-gradient::before {
-  content: "";
-  position: absolute;
-  left: 1px;
-  right: 1px;
-  top: 1px;
-  bottom: 1px;
-  border-radius: 4px;
-  background-color: var(--color-primary-2);
-  z-index: -1;
-  transition: 200ms; }
-
-/* line 34, sass/components/_button.scss */
 .btn-row__email {
-  background: linear-gradient(to right, var(--color-secondary-1), var(--color-secondary-2)); }
+  background: linear-gradient(var(--color-primary-2), var(--color-primary-2)) padding-box, linear-gradient(to right, var(--color-secondary-1), var(--color-secondary-2)) border-box; }
 
-/* line 38, sass/components/_button.scss */
+/* line 18, sass/components/_button.scss */
 .btn-row__linkedin {
-  background: linear-gradient(to right, var(--color-tertiary), var(--color-tertiary-2)); }
+  background: linear-gradient(var(--color-primary-2), var(--color-primary-2)) padding-box, linear-gradient(to right, var(--color-tertiary), var(--color-tertiary-2)) border-box; }
 
-/* line 42, sass/components/_button.scss */
+/* line 22, sass/components/_button.scss */
 .btn-row__slack {
-  background: linear-gradient(to right, var(--color-tertiary-3), var(--color-tertiary-4)); }
+  background: linear-gradient(var(--color-primary-2), var(--color-primary-2)) padding-box, linear-gradient(to right, var(--color-tertiary-3), var(--color-tertiary-4)) border-box; }
 
-/* line 46, sass/components/_button.scss */
+/* line 26, sass/components/_button.scss */
 .btn-row__github {
-  background: linear-gradient(to right, var(--color-tertiary-5), var(--color-tertiary-6)); }
+  background: linear-gradient(var(--color-primary-2), var(--color-primary-2)) padding-box, linear-gradient(to right, var(--color-tertiary-5), var(--color-tertiary-6)) border-box; }
 
-/* line 50, sass/components/_button.scss */
+/* line 30, sass/components/_button.scss */
 .btn-row__link {
-  background: linear-gradient(to right, var(--color-secondary-1), var(--color-secondary-2)); }
+  background: linear-gradient(var(--color-primary-2), var(--color-primary-2)) padding-box, linear-gradient(to right, var(--color-secondary-1), var(--color-secondary-2)) border-box; }
 
 /* line 1, sass/components/gridCard.scss */
 .projects {
@@ -172,36 +188,46 @@ body {
 
 /* line 5, sass/components/gridCard.scss */
 .projects__list {
-  display: -ms-grid;
   display: grid;
   grid-auto-columns: 1fr;
-  grid-column-gap: 80px;
-  grid-row-gap: 80px;
-  -ms-grid-columns: 1fr 1fr;
+  gap: 80px;
   grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto;
   grid-template-rows: auto;
   color: var(--color-light); }
+  @media only screen and (max-width: 61.9375em) {
+    /* line 5, sass/components/gridCard.scss */
+    .projects__list {
+      grid-auto-flow: row;
+      gap: 40px; } }
   /* line 16, sass/components/gridCard.scss */
+  .projects__list-items {
+    grid-area: span 1 / span 1 / span 1 / span 1; }
+  /* line 19, sass/components/gridCard.scss */
   .projects__list-link, .projects__list-link:visited, .projects__list:link {
     text-decoration: none;
     color: inherit; }
-  /* line 23, sass/components/gridCard.scss */
-  .projects__list-shape img {
+  /* line 25, sass/components/gridCard.scss */
+  .projects__list-shape {
     width: 100%; }
-  /* line 27, sass/components/gridCard.scss */
+    /* line 27, sass/components/gridCard.scss */
+    .projects__list-shape img {
+      width: 100%;
+      display: inline-block;
+      vertical-align: middle; }
+  /* line 33, sass/components/gridCard.scss */
   .projects__list-caption {
     display: flex;
-    height: 16rem;
-    padding-right: 30rem;
+    height: 22rem;
+    padding-right: 12rem;
     flex-direction: column;
     justify-content: space-around;
     margin-bottom: 5rem; }
-  /* line 35, sass/components/gridCard.scss */
+  /* line 41, sass/components/gridCard.scss */
   .projects__list-github {
     display: flex;
+    gap: 29px;
     align-items: center; }
-    /* line 38, sass/components/gridCard.scss */
+    /* line 45, sass/components/gridCard.scss */
     .projects__list-github object {
       flex: 0 0 20%; }
 
@@ -211,37 +237,52 @@ body {
   margin-bottom: 5rem; }
 
 /* line 1, sass/pages/_home.scss */
-section,
 footer {
-  padding: 0rem 26rem;
   margin-top: 17vh; }
 
-/* line 7, sass/pages/_home.scss */
+/* line 6, sass/pages/_home.scss */
+section {
+  margin-top: 17vh;
+  overflow: hidden; }
+
+/* line 11, sass/pages/_home.scss */
 main {
-  background-color: var(--color-primary-2);
-  margin-top: 17vh; }
+  background-color: var(--color-primary-2); }
 
-/* line 13, sass/pages/_home.scss */
+/* line 15, sass/pages/_home.scss */
+.hero__container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+  padding-right: 8em;
+  padding-left: 8em; }
+  @media only screen and (min-width: 90em) {
+    /* line 15, sass/pages/_home.scss */
+    .hero__container {
+      max-width: 1549px; } }
+
+/* line 26, sass/pages/_home.scss */
 .hero {
-  background-color: transparent;
-  width: 100%; }
+  display: flex;
+  flex-direction: column;
+  gap: 18rem; }
 
-/* line 18, sass/pages/_home.scss */
+/* line 32, sass/pages/_home.scss */
 .btn-row {
   display: flex; }
-  /* line 20, sass/pages/_home.scss */
+  /* line 34, sass/pages/_home.scss */
   .btn-row > *:not(:last-child) {
     margin-right: 2rem; }
 
-/* line 25, sass/pages/_home.scss */
+/* line 39, sass/pages/_home.scss */
 .btn-row__icon {
   display: flex;
   align-items: center; }
-  /* line 28, sass/pages/_home.scss */
+  /* line 42, sass/pages/_home.scss */
   .btn-row__icon object {
     margin-right: 1rem; }
 
-/* line 33, sass/pages/_home.scss */
+/* line 47, sass/pages/_home.scss */
 .featured-projects {
   background-color: transparent; }
 
@@ -261,8 +302,15 @@ main {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding: 0rem 26rem; }
-  /* line 17, sass/layouts/_header.scss */
+    padding: 0rem 26rem;
+    padding-right: 8em;
+    padding-left: 8rem;
+    max-width: 1170px; }
+    @media only screen and (min-width: 90em) {
+      /* line 11, sass/layouts/_header.scss */
+      .header__container {
+        max-width: 1549px; } }
+  /* line 23, sass/layouts/_header.scss */
   .header__inner {
     display: flex;
     align-items: center;
@@ -295,54 +343,55 @@ main {
 /* line 1, sass/layouts/_workExperience.scss */
 .content {
   display: flex;
-  color: var(--color-light); }
+  color: var(--color-light);
+  gap: 6.6rem; }
 
-/* line 6, sass/layouts/_workExperience.scss */
+/* line 7, sass/layouts/_workExperience.scss */
 .sidebar {
-  flex: 0 0 18%;
+  flex: 0 0 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-left: 2px solid #1f1e1e; }
 
-/* line 15, sass/layouts/_workExperience.scss */
+/* line 16, sass/layouts/_workExperience.scss */
 .experience__description {
   flex: 1; }
-  /* line 17, sass/layouts/_workExperience.scss */
+  /* line 18, sass/layouts/_workExperience.scss */
   .experience__description--content {
     display: none; }
 
-/* line 21, sass/layouts/_workExperience.scss */
+/* line 22, sass/layouts/_workExperience.scss */
 .experience__type {
   display: flex;
   justify-content: space-between; }
 
-/* line 25, sass/layouts/_workExperience.scss */
+/* line 26, sass/layouts/_workExperience.scss */
 .experience__skills {
   display: flex;
   flex-direction: column;
   height: 18.2rem;
   justify-content: space-evenly; }
 
-/* line 33, sass/layouts/_workExperience.scss */
+/* line 34, sass/layouts/_workExperience.scss */
 .side-nav {
   font-size: 1.4rem;
   list-style: none;
   margin-top: 0rem; }
-  /* line 37, sass/layouts/_workExperience.scss */
+  /* line 38, sass/layouts/_workExperience.scss */
   .side-nav__item {
     position: relative; }
-    /* line 39, sass/layouts/_workExperience.scss */
+    /* line 40, sass/layouts/_workExperience.scss */
     .side-nav__item:not(:last-child) {
       margin-bottom: 0.5rem; }
-  /* line 43, sass/layouts/_workExperience.scss */
+  /* line 44, sass/layouts/_workExperience.scss */
   .side-nav__item:hover::before, .side-nav__item--active::before {
     transform: scaleY(1);
-    width: 50%; }
-  /* line 48, sass/layouts/_workExperience.scss */
+    width: 100%; }
+  /* line 49, sass/layouts/_workExperience.scss */
   .side-nav__item:active::before {
-    background-color: var(--color-light); }
-  /* line 51, sass/layouts/_workExperience.scss */
+    background-color: var(--color-primary-5); }
+  /* line 52, sass/layouts/_workExperience.scss */
   .side-nav__item::before {
     content: "";
     position: absolute;
@@ -353,7 +402,7 @@ main {
     background-color: var(--color-primary-5);
     transform: scaleY(0);
     transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
-  /* line 62, sass/layouts/_workExperience.scss */
+  /* line 63, sass/layouts/_workExperience.scss */
   .side-nav__link,
   .side-nav__link :link,
   .side-nav__link :visited {
@@ -366,16 +415,23 @@ main {
     position: relative;
     z-index: 1;
     align-items: center; }
-  /* line 75, sass/layouts/_workExperience.scss */
+  /* line 76, sass/layouts/_workExperience.scss */
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
 
-/* line 83, sass/layouts/_workExperience.scss */
+/* line 84, sass/layouts/_workExperience.scss */
 .tabs__content-active {
   display: block; }
+
+/* line 88, sass/layouts/_workExperience.scss */
+.side-nav__item--active {
+  background-color: var(--color-primary-5);
+  transform: scaleY(1);
+  width: 100%;
+  border-left: 1.5px solid var(--color-light); }
 
 /* line 2, sass/layouts/_footer.scss */
 .other-projects__collection {
